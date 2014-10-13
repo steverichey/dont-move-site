@@ -1,0 +1,212 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Begin custom styles */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	line-height:1.6;
+	color:#E6E8F2;
+	background-color:#01022A;
+}
+
+a {
+	text-decoration:none;
+	color:#E59F33;
+}
+
+a:hover {
+	color:#A10826;
+}
+
+a[href^="//"]:after,
+a[href^="http://"]:after,
+a[href^="https://"]:after {
+	content: url('external_link.svg');
+	margin: 0 0 0 5px;
+}
+
+a[href*="steverichey.com"]:after {
+	content: '';
+	margin: 0;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;`
+	position: absolute;
+}
+
+#footer {
+	margin-top: 20px;
+}
+
+.centered {
+	text-align: center;
+}
+
+iframe.fullwidth {
+	width: 100%;
+}
+
+#buttons {
+	text-align: center;
+}
+
+#buttons .clear {
+	clear: both;
+}
+
+.button {
+	color: #E59F33;
+	float: left;
+	height: 70px;
+	width: auto;
+	margin: 2px;
+	padding: 4px;
+	text-align: center;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	cursor:default;
+	opacity: 0.5;
+	transition-duration: 0.25s;
+	-webkit-transition-duration: 0.25s;
+	-moz-transition-duration: 0.25s;
+	-o-transition-duration: 0.25s;
+	cursor: pointer;
+}
+
+.button:hover {
+	opacity: 1;
+	color: #A10826;
+}
+
+.button.external:after {
+	content: url('external_link.svg');
+	margin: 0 0 0 5px;
+}
+
+div.button a {
+	text-decoration: none;
+}
+
+.button > div {
+	margin: auto;
+	background: url('icon_sprite.svg') no-repeat;
+	background-size: 100%;
+	margin-top: 2px;
+	width: 44px;
+	height: 44px;
+	z-index: -100;
+}
+
+.button #icon-trailer { background: url('icon_video.svg') no-repeat; }
+.button #icon-press { background: url('icon_press.svg') no-repeat; }
+.button #icon-greenlight { background: url('icon_greenlight.svg') no-repeat; }
+.button #icon-humblewidget { background: url('icon_humble.svg') no-repeat; }
+.button #icon-humblestore { background: url('icon_humble.svg') no-repeat; }
+.button #icon-googleplay { background: url('icon_googleplay.svg') no-repeat; }
+.button #icon-appstore { background: url('icon_appstore.svg') no-repeat; }
+.button #icon-amazon { background: url('icon_amazon.svg') no-repeat; }
+.button #icon-indiegamestand { background: url('icon_indiegamestand.svg') no-repeat; }
+.button #icon-itchio { background: url('icon_itchio.svg') no-repeat; }
+.button #icon-desura { background: url('icon_desura.svg') no-repeat; }
+.button #icon-gumroad { background: url('icon_gumroad.svg') no-repeat; }
+.button #icon-bandcamp { background: url('icon_bandcamp.svg') no-repeat; }
+.button #icon-indiedb { background: url('icon_indiedb.svg') no-repeat; }
+
+.hideable {
+	overflow: hidden;
+	margin: 5px;
+	max-height: 0;
+	-webkit-transition: max-height 0.5s;
+	-moz-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+}
+
+.shown {
+	max-height: 100vh;
+}
+
+blockquote {
+	position: relative;
+	padding: 10px;
+	margin: 10px;
+	width: 80%;
+	left: 10%;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+blockquote .source:before {
+	content: '-';
+	padding: 0 5px 0 5px;
+}
+
+blockquote .source {
+	float: right;
+	position: relative;
+	margin-top: 5px;
+	width: 30%;
+	font-style: italic;
+}
+
+@media (min-width: 800px) {
+	#container { width: 800px; }
+}
