@@ -7,9 +7,11 @@
 var Utils = (function (){
 	function onButtonClick(event) {
 		var id = event.target.id;
-		var type = id.substr(id.indexOf('-') + 1, event.target.id.length);
+		var type = id.substr(id.indexOf('-') + 1, id.length);
 		var friendid = '#content-' + type;
 		var friend = $(friendid);
+		
+		console.log("Clicked: " + id);
 		
 		// If a div with the appropriate content tag exists, show it
 		// Otherwise, navigate to the link
@@ -70,6 +72,6 @@ var Utils = (function (){
 }());
 
 Zepto(function($){
-	$('.button').on('click', Utils.onButtonClick);
+	$('#buttons li').on('click', Utils.onButtonClick);
 	smoothScroll.init();
 });

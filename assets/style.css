@@ -45,6 +45,29 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/*--------- Clearfix ----------*/
+/*-- Modern browsers --*/
+.cf::before, .cf::after {  
+	content:""; display:table;
+}
+.cf::after {
+	clear:both;
+}
+/*-- FF, IE8, O, S, etc. --*/
+.cf:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*-- IE 6/7 (trigger hasLayout) --*/ 
+.cf {  
+	*zoom:1;
+}
+*+html .cf {
+	display: inline-block; /* IE7not8 */
+}
 /* Begin custom styles */
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
@@ -103,29 +126,25 @@ iframe.fullwidth {
 }
 
 #buttons {
-	text-align: center;
+	margin:0 auto;
+	padding:1em 0;
+	list-style:none outside none;
 }
 
-#buttons .clear {
-	clear: both;
-}
-
-.button {
-	color: #E59F33;
-	float: left;
-	height: 70px;
-	width: auto;
-	margin: 2px;
-	padding: 4px;
-	text-align: center;
+#buttons li {
+	text-align:center;
+	display:block;
+	float:left;
+	width:160px;
+	height:70px;
+	margin:1em 1em;
+	opacity: 0.5;
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-	cursor:default;
-	opacity: 0.5;
 	transition-duration: 0.25s;
 	-webkit-transition-duration: 0.25s;
 	-moz-transition-duration: 0.25s;
@@ -133,44 +152,36 @@ iframe.fullwidth {
 	cursor: pointer;
 }
 
-.button:hover {
+#buttons li:hover {
 	opacity: 1;
-	color: #A10826;
 }
 
-.button.external:after {
-	content: url('external_link.svg');
+#buttons i {
+	display:block;
+	width:100%;
+	height:50px;
+	background-repeat:no-repeat;
+	background-position:top center;
+}
+
+#buttons #greenlight i { background-image:url(/assets/icon_greenlight.svg); }
+#buttons #humblewidget i { background-image:url(/assets/icon_humble.svg); }
+#buttons #googleplay i { background-image:url(/assets/icon_googleplay.svg); }
+#buttons #appstore i { background-image:url(/assets/icon_appstore.svg); }
+#buttons #amazon i { background-image:url(/assets/icon_amazon.svg); }
+#buttons #indiegamestand i { background-image:url(/assets/icon_indiegamestand.svg); }
+#buttons #gumroad i { background-image:url(/assets/icon_gumroad.svg); }
+#buttons #indiedb i { background-image:url(/assets/icon_indiedb.svg); }
+#buttons #trailer i { background-image:url(/assets/icon_video.svg); }
+#buttons #press i { background-image:url(/assets/icon_press.svg); }
+#buttons #itchio i { background-image:url(/assets/icon_itchio.svg); }
+#buttons #desura i { background-image:url(/assets/icon_desura.svg); }
+#buttons #bandcamp i { background-image:url(/assets/icon_bandcamp.svg); }
+
+#buttons a.ext:after {
+	content: url('/assets/external_link.svg');
 	margin: 0 0 0 5px;
 }
-
-div.button a {
-	text-decoration: none;
-}
-
-.button > div {
-	margin: auto;
-	background: url('icon_sprite.svg') no-repeat;
-	background-size: 100%;
-	margin-top: 2px;
-	width: 44px;
-	height: 44px;
-	z-index: -100;
-}
-
-.button #icon-trailer { background: url('icon_video.svg') no-repeat; }
-.button #icon-press { background: url('icon_press.svg') no-repeat; }
-.button #icon-greenlight { background: url('icon_greenlight.svg') no-repeat; }
-.button #icon-humblewidget { background: url('icon_humble.svg') no-repeat; }
-.button #icon-humblestore { background: url('icon_humble.svg') no-repeat; }
-.button #icon-googleplay { background: url('icon_googleplay.svg') no-repeat; }
-.button #icon-appstore { background: url('icon_appstore.svg') no-repeat; }
-.button #icon-amazon { background: url('icon_amazon.svg') no-repeat; }
-.button #icon-indiegamestand { background: url('icon_indiegamestand.svg') no-repeat; }
-.button #icon-itchio { background: url('icon_itchio.svg') no-repeat; }
-.button #icon-desura { background: url('icon_desura.svg') no-repeat; }
-.button #icon-gumroad { background: url('icon_gumroad.svg') no-repeat; }
-.button #icon-bandcamp { background: url('icon_bandcamp.svg') no-repeat; }
-.button #icon-indiedb { background: url('icon_indiedb.svg') no-repeat; }
 
 .hideable {
 	overflow: hidden;

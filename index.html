@@ -15,50 +15,7 @@
 	
 	<style type="text/css">
 	
-		#buy {
-			margin:0 auto;
-			padding:1em 0;
-			list-style:none outside none;
-		}
-		#buy li {
-			text-align:center;
-			display:block;
-			float:left;
-			width:70px;
-			height:70px;
-			margin:0 1em;
-		}
-		#buy i {
-			display:block;
-			width:100%;
-			height:50px;
-			background-repeat:no-repeat;
-			background-position:top center;
-		}
 		
-	
-		#buy #greenlight i {background-image:url(/assets/icon_greenlight.svg);}
-
-		#buy a.ext:after {
-			content: url('/assets/external_link.svg');
-			margin: 0 0 0 5px;
-		}
-		/*--------- Clearfix ----------*/
-				/*-- modern browsers --*/
-		.cf::before, .cf::after {  content:""; display:table;  }
-	.cf::after {  clear:both; }
-					/*-- FF, IE8, O, S, etc. --*/
-	.cf:after {
-	  content: ".";
-	  display: block;
-	  height: 0;
-	  clear: both;
-	  visibility: hidden;
-	  }
-					/*-- IE 6/7 (trigger hasLayout) --*/ 
-	.cf {  *zoom:1;  }
-	*+html .cf	{display: inline-block; /* IE7not8 */
-	}
 	</style>
 </head>	
 <body>
@@ -66,37 +23,21 @@
     	<div id="header" title="Don't Move for Windows, PC, Linux, Android, iOS, and Ouya Entertainment Systems">
 			<img src="assets/header.png" width="100%" alt="Don't Move for Windows, PC, Linux, Android, iOS, and Ouya Entertainment Systems" />
     	</div>
-		
-	<ul id="buy" class="cf">
-		<li><a class="ext" id="greenlight" href="#"><i></i>Greenlight</a></li>
-		<li><a class="ext" id="humble" href="#"><i></i>Humble Widget</a></li>
-		<li><a class="ext" id="google" href="#"><i></i>Google Play</a></li>
-		<li><a class="ext" id="appstore" href="#"><i></i>App Store</a></li>
-		<li><a class="ext" id="amazon" href="#"><i></i>Amazon</a></li>
-		<li><a class="ext" id="indiegame" href="#"><i></i>IndieGameStand</a></li>
-		<li><a class="ext" id="gumroad" href="#"><i></i>Gumroad</a></li>
-		<li><a class="ext" id="indiedb" href="#"><i></i>IndieDB</a></li>
-		
-	</ul>
-
-		<hr>
-		
-		<div id="buttons">
-			<div class="button" id="button-trailer" title="View the trailer"><div id="icon-trailer"></div>Trailer</div>
-			<div class="button" id="button-press" title="Press quotes and review links"><div id="icon-press"></div>Press</div>
-			<div class="button external" id="button-greenlight" title="Vote on Steam Greenlight"><div id="icon-greenlight"></div>Greenlight</div>
-			<div class="button" id="button-humblewidget" title="Buy via Humble widget"><div id="icon-humblewidget"></div>Humble Widget</div>
-			<div class="button external" id="button-googleplay" title="Buy via Google Play"><div id="icon-googleplay"></div>Google Play</div>
-			<div class="button external" id="button-appstore" title="Buy via the Apple App Store"><div id="icon-appstore"></div>App Store</div>
-			<div class="button external" id="button-amazon" title="Buy on Amazon"><div id="icon-amazon"></div>Amazon</div>
-			<div class="button external" id="button-indiegamestand" title="Buy on IndieGameStand"><div id="icon-indiegamestand"></div>IndieGameStand</div>
-			<div class="button" id="button-itchio" title="Buy via itch.io widget"><div id="icon-itchio"></div>itch.io</div>
-			<div class="button" id="button-desura" title="Buy via Desura widget"><div id="icon-desura"></div>Desura</div>
-			<div class="button external" id="button-gumroad" title="Buy via Gumroad"><div id="icon-gumroad"></div>Gumroad</div>
-			<div class="button" id="button-bandcamp" title="Listen to or buy soundtrack via Bandcamp"><div id="icon-bandcamp"></div>Bandcamp</div>
-			<div class="button external" id="button-indiedb" title="View page on IndieDB"><div id="icon-indiedb"></div>IndieDB</div>
-			<div class="clear"></div>
-		</div>
+		<ul id="buttons" class="cf">
+			<li><a id="trailer" title="View the trailer"><i></i>Trailer</a></li>
+			<li><a id="press" href="#" title="Press quotes and review links"><i></i>Press</a></li>
+			<li><a id="humblewidget" href="#" title="Buy via Humble widget"><i></i>Humble Widget</a></li>
+			<li><a id="itchio" href="#" title="Buy via itch.io widget"><i></i>itch.io Widget</a></li>
+			<li><a id="desura" href="#" title="Buy via Desura widget"><i></i>Desura Widget</a></li>
+			<li><a id="bandcamp" href="#" title="Listen to or buy soundtrack via Bandcamp widget"><i></i>Bandcamp Widget</a></li>
+			<li><a class="ext" id="greenlight" href="#"><i></i>Greenlight</a></li>
+			<li><a class="ext" id="googleplay" href="#" title="Buy via Google Play"><i></i>Google Play</a></li>
+			<li><a class="ext" id="appstore" href="#" title="Buy via the Apple App Store"><i></i>App Store</a></li>
+			<li><a class="ext" id="amazon" href="#" title="Buy on Amazon"><i></i>Amazon</a></li>
+			<li><a class="ext" id="indiegamestand" href="#" title="Buy on IndieGameStand"><i></i>IndieGameStand</a></li>
+			<li><a class="ext" id="gumroad" href="#" title="Buy via Gumroad"><i></i>Gumroad</a></li>
+			<li><a class="ext" id="indiedb" href="#" title="View page on IndieDB"><i></i>IndieDB</a></li>
+		</ul>
 		<div id="content-trailer" class="hideable">
 			<p class="centered">
 				<iframe src="//player.vimeo.com/video/85752624?title=0&amp;byline=0&amp;portrait=0&amp;color=e59f33" width="800" height="450" frameborder="0" class="fullwidth" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
