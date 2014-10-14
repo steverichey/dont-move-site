@@ -98,7 +98,7 @@ a:hover {
 a[href^="//"]:after,
 a[href^="http://"]:after,
 a[href^="https://"]:after {
-	content: url('external_link.svg');
+	content: url('../assets/icon_external.svg');
 	margin: 0 0 0 5px;
 }
 
@@ -157,13 +157,16 @@ iframe.fullwidth {
 /* -- icons -- */
 #buttons i {
 	display:block;
-	width:100%;
-	height:50px;
+	width:44px;
+	height:44px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url('icon_sprite.svg');
 	background-repeat:no-repeat;
 	background-position:top center;
 	z-index: -1;
 }
-#buttons #greenlight i 		{ background-image:url(../assets/icon_greenlight.svg); }
+#buttons #greenlight i 		{ background-position: -286px 0px; }
 #buttons #humblewidget i 	{ background-image:url(../assets/icon_humble.svg); }
 #buttons #googleplay i 		{ background-image:url(../assets/icon_googleplay.svg); }
 #buttons #appstore i 		{ background-image:url(../assets/icon_appstore.svg); }
@@ -178,8 +181,8 @@ iframe.fullwidth {
 #buttons #bandcamp i 		{ background-image:url(../assets/icon_bandcamp.svg); }
 
 /* external links */
-#buttons a.ext:after {
-	content: url('/assets/external_link.svg');
+#buttons li.ext:after {
+	content: url('/assets/icon_external.svg');
 	margin: 0 0 0 5px;
 }
 
