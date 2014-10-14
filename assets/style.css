@@ -135,7 +135,7 @@ iframe.fullwidth {
 	text-align:center;
 	display:inline-block;
 	padding:0;
-	width:24%;
+	width:20%;
 	height:70px;
 	margin:1em 1em;
 	opacity: 0.5;
@@ -161,6 +161,7 @@ iframe.fullwidth {
 	height:50px;
 	background-repeat:no-repeat;
 	background-position:top center;
+	z-index: -1;
 }
 #buttons #greenlight i 		{ background-image:url(../assets/icon_greenlight.svg); }
 #buttons #humblewidget i 	{ background-image:url(../assets/icon_humble.svg); }
@@ -181,12 +182,6 @@ iframe.fullwidth {
 	content: url('/assets/external_link.svg');
 	margin: 0 0 0 5px;
 }
-
-	@media (max-width: 799px) {
-		#buttons li {
-			font-size:.723em;
-		}
-	}
 
 .hideable {
 	overflow: hidden;
@@ -225,4 +220,18 @@ blockquote .source {
 
 @media (min-width: 800px) {
 	#container { width: 800px; }
+}
+
+@media (max-width: 799px) {
+	#buttons li {
+		font-size:.723em;
+	}
+	
+	#buttons i {
+		transform: scale(0.75, 0.75);
+		-webkit-transform: scale(0.75, 0.75);
+		-moz-transform: scale(0.75, 0.75);
+		-o-transform: scale(0.75, 0.75);
+		-ms-transform: scale(0.75, 0.75);
+	}
 }

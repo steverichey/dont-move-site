@@ -6,12 +6,9 @@
 
 var Utils = (function (){
 	function onButtonClick(event) {
-		var id = event.target.id;
-		var type = id.substr(id.indexOf('-') + 1, id.length);
+		var type = event.currentTarget.id;
 		var friendid = '#content-' + type;
 		var friend = $(friendid);
-		
-		console.log("Clicked: " + id);
 		
 		// If a div with the appropriate content tag exists, show it
 		// Otherwise, navigate to the link
