@@ -126,16 +126,16 @@ iframe.fullwidth {
 }
 
 #buttons {
+	list-style:none outside none;
 	margin:0 auto;
 	padding:1em 0;
-	list-style:none outside none;
+	text-align:justify;
 }
-
 #buttons li {
 	text-align:center;
-	display:block;
-	float:left;
-	width:160px;
+	display:inline-block;
+	padding:0;
+	width:20%;
 	height:70px;
 	margin:1em 1em;
 	opacity: 0.5;
@@ -151,11 +151,10 @@ iframe.fullwidth {
 	-o-transition-duration: 0.25s;
 	cursor: pointer;
 }
-
 #buttons li:hover {
 	opacity: 1;
 }
-
+/* -- icons -- */
 #buttons i {
 	display:block;
 	width:100%;
@@ -163,21 +162,21 @@ iframe.fullwidth {
 	background-repeat:no-repeat;
 	background-position:top center;
 }
+#buttons #greenlight i 		{ background-image:url(../assets/icon_greenlight.svg); }
+#buttons #humblewidget i 	{ background-image:url(../assets/icon_humble.svg); }
+#buttons #googleplay i 		{ background-image:url(../assets/icon_googleplay.svg); }
+#buttons #appstore i 		{ background-image:url(../assets/icon_appstore.svg); }
+#buttons #amazon i 			{ background-image:url(../assets/icon_amazon.svg); }
+#buttons #indiegamestand i 	{ background-image:url(../assets/icon_indiegamestand.svg); }
+#buttons #gumroad i 		{ background-image:url(../assets/icon_gumroad.svg); }
+#buttons #indiedb i 		{ background-image:url(../assets/icon_indiedb.svg); }
+#buttons #trailer i 		{ background-image:url(../assets/icon_video.svg); }
+#buttons #press i 			{ background-image:url(../assets/icon_press.svg); }
+#buttons #itchio i 			{ background-image:url(../assets/icon_itchio.svg); }
+#buttons #desura i 			{ background-image:url(../assets/icon_desura.svg); }
+#buttons #bandcamp i 		{ background-image:url(../assets/icon_bandcamp.svg); }
 
-#buttons #greenlight i { background-image:url(/assets/icon_greenlight.svg); }
-#buttons #humblewidget i { background-image:url(/assets/icon_humble.svg); }
-#buttons #googleplay i { background-image:url(/assets/icon_googleplay.svg); }
-#buttons #appstore i { background-image:url(/assets/icon_appstore.svg); }
-#buttons #amazon i { background-image:url(/assets/icon_amazon.svg); }
-#buttons #indiegamestand i { background-image:url(/assets/icon_indiegamestand.svg); }
-#buttons #gumroad i { background-image:url(/assets/icon_gumroad.svg); }
-#buttons #indiedb i { background-image:url(/assets/icon_indiedb.svg); }
-#buttons #trailer i { background-image:url(/assets/icon_video.svg); }
-#buttons #press i { background-image:url(/assets/icon_press.svg); }
-#buttons #itchio i { background-image:url(/assets/icon_itchio.svg); }
-#buttons #desura i { background-image:url(/assets/icon_desura.svg); }
-#buttons #bandcamp i { background-image:url(/assets/icon_bandcamp.svg); }
-
+/* external links */
 #buttons a.ext:after {
 	content: url('/assets/external_link.svg');
 	margin: 0 0 0 5px;
