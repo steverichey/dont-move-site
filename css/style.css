@@ -162,19 +162,20 @@ iframe.fullwidth {
 	background-repeat:no-repeat;
 	background-position:top center;
 }
-#buttons #greenlight i 		{ background-image:url(../img/icon_greenlight.svg); }
-#buttons #humblewidget i 	{ background-image:url(../img/icon_humble.svg); }
-#buttons #googleplay i 		{ background-image:url(../img/icon_googleplay.svg); }
-#buttons #appstore i 		{ background-image:url(../img/icon_appstore.svg); }
-#buttons #amazon i 			{ background-image:url(../img/icon_amazon.svg); }
-#buttons #indiegamestand i 	{ background-image:url(../img/icon_indiegamestand.svg); }
-#buttons #gumroad i 		{ background-image:url(../img/icon_gumroad.svg); }
-#buttons #indiedb i 		{ background-image:url(../img/icon_indiedb.svg); }
-#buttons #trailer i 		{ background-image:url(../img/icon_video.svg); }
-#buttons #press i 			{ background-image:url(../img/icon_press.svg); }
-#buttons #itchio i 			{ background-image:url(../img/icon_itchio.svg); }
-#buttons #desura i 			{ background-image:url(../img/icon_desura.svg); }
-#buttons #bandcamp i 		{ background-image:url(../img/icon_bandcamp.svg); }
+
+#buttons #greenlight i 		{ background-image:url(../img/ico_greenlight.svg); }
+#buttons #humblewidget i 	{ background-image:url(../img/ico_humble.svg); }
+#buttons #googleplay i 		{ background-image:url(../img/ico_play.svg); }
+#buttons #appstore i 		{ background-image:url(../img/ico_appstore.svg); }
+#buttons #amazon i 			{ background-image:url(../img/ico_amazon.svg); }
+#buttons #indiegamestand i 	{ background-image:url(../img/ico_indiegs.svg); }
+#buttons #gumroad i 		{ background-image:url(../img/ico_gumroad.svg); }
+#buttons #indiedb i 		{ background-image:url(../img/ico_indiedb.svg); }
+#buttons #trailer i 		{ background-image:url(../img/ico_trailer.svg); }
+#buttons #press i 			{ background-image:url(../img/ico_press.svg); }
+#buttons #itchio i 			{ background-image:url(../img/ico_itchio.svg); }
+#buttons #desura i 			{ background-image:url(../img/ico_desura.svg); }
+#buttons #bandcamp i 		{ background-image:url(../img/ico_bandcamp.svg); }
 
 /* external links */
 #buttons a.ext:after {
