@@ -29,3 +29,6 @@ node_modules
 
 # Don't save intermediary files
 temp
+
+# Don't save compiled site
+dist
