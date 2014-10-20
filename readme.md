@@ -6,9 +6,9 @@ This is the code for the new Don't Move website.
 
 1. Install [NodeJS](http://nodejs.org/).
 2. Install [grunt](http://gruntjs.com/getting-started).
-3. Install dependencies by running 'npm install' from the terminal.
-4. Build the site by running 'grunt' from the terminal.
-5. The result will be created in a 'dist' folder.
+3. Install dependencies by running `npm install` from the terminal.
+4. Build the site by running `grunt` from the terminal.
+5. The result will be created in a `dist` folder.
 
 # License
 
