@@ -1,0 +1,49 @@
+{
+  "name": "dont-move-site",
+  "version": "0.0.1",
+  "description": "Updated website for Don't Move.",
+  "main": "index.js",
+  "dependencies": {
+    "zepto-node": "^1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "~3.0.1",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-embed": "^0.2.1",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-csslint": "^0.3.1",
+    "grunt-html-angular-validate": "^0.4.0",
+    "grunt-image-embed": "^0.3.1",
+    "grunt-iconizr": "^0.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steverichey/dont-move-site"
+  },
+  "keywords": [
+    "dont",
+    "move",
+    "git",
+    "npm",
+    "node",
+    "website",
+    "repo",
+    "awesome"
+  ],
+  "author": "Steve Richey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steverichey/dont-move-site/issues"
+  },
+  "homepage": "https://github.com/steverichey/dont-move-site"
+}
