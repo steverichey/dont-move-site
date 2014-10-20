@@ -1,0 +1,228 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--------- Clearfix ----------*/
+/*-- Modern browsers --*/
+.cf::before, .cf::after {  
+	content:""; display:table;
+}
+.cf::after {
+	clear:both;
+}
+/*-- FF, IE8, O, S, etc. --*/
+.cf:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*-- IE 6/7 (trigger hasLayout) --*/ 
+.cf {  
+	*zoom:1;
+}
+*+html .cf {
+	display: inline-block; /* IE7not8 */
+}
+/* Begin custom styles */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	background: none;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size:1em;
+	font-weight:bold;
+	line-height:1.6;
+	color:#E6E8F2;
+	background-color:#01022A;
+}
+
+a {
+	text-decoration:none;
+	color:#E59F33;
+}
+
+a:hover {
+	color:#A10826;
+}
+
+a[href^="//"]:after,
+a[href^="http://"]:after,
+a[href^="https://"]:after {
+	content: url('external_link.svg');
+	margin: 0 0 0 5px;
+}
+
+a[href*="steverichey.com"]:after {
+	content: '';
+	margin: 0;
+}
+
+#container {
+	margin-left: auto;
+	margin-right: auto;`
+	position: absolute;
+}
+
+#footer {
+	margin-top: 20px;
+}
+
+.centered {
+	text-align: center;
+}
+
+iframe.fullwidth {
+	width: 100%;
+}
+
+#buttons {
+	list-style:none outside none;
+	margin:0 auto;
+	padding:1em 0;
+	text-align:justify;
+}
+#buttons li {
+	text-align:center;
+	display:inline-block;
+	padding:0;
+	width:24%;
+	height:70px;
+	margin:1em 1em;
+	opacity: 0.5;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	transition-duration: 0.25s;
+	-webkit-transition-duration: 0.25s;
+	-moz-transition-duration: 0.25s;
+	-o-transition-duration: 0.25s;
+	cursor: pointer;
+}
+#buttons li:hover {
+	opacity: 1;
+}
+/* -- icons -- */
+#buttons i {
+	display:block;
+	width:100%;
+	height:50px;
+	background-repeat:no-repeat;
+	background-position:top center;
+}
+#greenlight i 		{ background-image:url(../img/ico_greenlight.svg); }
+#humblewidget i 	{ background-image:url(../img/ico_humble.svg); }
+#googleplay i 		{ background-image:url(../img/ico_play.svg); }
+#appstore i 		{ background-image:url(../img/ico_appstore.svg); }
+#amazon i 			{ background-image:url(../img/ico_amazon.svg); }
+#indiegamestand i 	{ background-image:url(../img/ico_indiegs.svg); }
+#gumroad i 			{ background-image:url(../img/ico_gumroad.svg); }
+#indiedb i 			{ background-image:url(../img/ico_indiedb.svg); }
+#trailer i 			{ background-image:url(../img/ico_trailer.svg); }
+#press i 			{ background-image:url(../img/ico_press.svg); }
+#itchio i 			{ background-image:url(../img/ico_itchio.svg); }
+#desura i 			{ background-image:url(../img/ico_desura.svg); }
+#bandcamp i 		{ background-image:url(../img/ico_bandcamp.svg); }
+
+/* external links */
+#buttons a.ext:after {
+	content: url('/img/external_link.svg');
+	margin: 0 0 0 5px;
+}
+
+	@media (max-width: 799px) {
+		#buttons li {
+			font-size:.723em;
+		}
+	}
+
+.hideable {
+	overflow: hidden;
+	margin: 5px;
+	max-height: 0;
+	-webkit-transition: max-height 0.5s;
+	-moz-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+}
+
+.shown {
+	max-height: 100vh;
+}
+
+blockquote {
+	position: relative;
+	padding: 10px;
+	margin: 10px;
+	width: 80%;
+	left: 10%;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+blockquote .source:before {
+	content: '-';
+	padding: 0 5px 0 5px;
+}
+
+blockquote .source {
+	float: right;
+	position: relative;
+	margin-top: 5px;
+	width: 30%;
+	font-style: italic;
+}
+
+@media (min-width: 800px) {
+	#container { width: 800px; }
+}
