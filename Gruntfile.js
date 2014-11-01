@@ -70,7 +70,7 @@ module.exports = function(grunt) {
     },
     embed: {
         options: {
-            threshold: '10KB'
+            threshold: '20KB'
         },
         dist: {
             files: {
@@ -104,8 +104,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-iconizr');
 
   // Specify tasks
-  grunt.registerTask('default', ['jshint', 'csslint', 'htmlangular', 'concat', 'browserify', 'uglify', 'htmlmin', 'cssmin', 'iconizr', 'embed', 'clean']);
-  grunt.registerTask('noclean', ['jshint', 'csslint', 'htmlangular', 'concat', 'browserify', 'uglify', 'htmlmin', 'cssmin', 'iconizr', 'embed']);
+  grunt.registerTask('default', ['jshint', 'csslint', 'htmlangular', 'concat', 'browserify', 'uglify', 'htmlmin', 'cssmin', 'embed', 'clean']);
+  grunt.registerTask('noclean', ['jshint', 'csslint', 'htmlangular', 'concat', 'browserify', 'uglify', 'htmlmin', 'cssmin', 'embed']);
   grunt.registerTask('wipe', ['clean']);
   grunt.registerTask('watch', ['watch']);
 };
