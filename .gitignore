@@ -32,3 +32,6 @@ temp
 
 # Don't save compiled site
 dist
+
+# Validation file
+html-angular-validate-report.json
