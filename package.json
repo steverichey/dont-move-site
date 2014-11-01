@@ -22,7 +22,8 @@
     "grunt-html-angular-validate": "^0.4.0",
     "grunt-image-embed": "^0.3.1",
     "grunt-iconizr": "^0.2.2",
-    "jquery-scrollto": "^1.4.4"
+    "jquery-scrollto": "^1.4.4",
+    "smooth-scroll": "git://github.com/cferdinandi/smooth-scroll"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

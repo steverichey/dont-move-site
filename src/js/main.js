@@ -1,10 +1,9 @@
 var Zepto = require('zepto-node');
 var $ = Zepto(window);
+var smoothScroll = require('smooth-scroll');
 
 var DontMoveMain = (function(values) {
     'use strict';
-    
-    console.log('has been called');
     
     function onClickButton(event) {
         var type = '';
@@ -21,8 +20,7 @@ var DontMoveMain = (function(values) {
             return;
         }
         
-        var friendclass = '.content.' + type;
-        var friend = $(friendclass);
+        var friend = $('.content.' + type);
         
         if (!friend) {
             return;
@@ -39,12 +37,8 @@ var DontMoveMain = (function(values) {
                 $('.hideable').removeClass('shown');
 
                 friend.addClass('shown');
-
-                setTimeout(function() {
-                    $('.content').ScrollTo({
-                        duration: 250
-                    });
-                }, 250);
+                
+                //smoothScroll(250, 250);
             }
         } else {
             switch (type) {
@@ -69,9 +63,6 @@ var DontMoveMain = (function(values) {
                 case 'gumroad ext':
                     window.open('https://gum.co/GaJE');
                     break;
-                default:
-                    console.log('tried to navigate to ' + type);
-                    break;
             }
         }
         
@@ -79,6 +70,7 @@ var DontMoveMain = (function(values) {
     }
     
     $('.buttons li').on('click', onClickButton);
+    smoothScroll.init();
     
     return DontMoveMain;
 }());
