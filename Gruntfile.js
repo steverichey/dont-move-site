@@ -70,7 +70,7 @@ module.exports = function(grunt) {
     },
     embed: {
         options: {
-            threshold: '20KB'
+            threshold: '200KB'
         },
         dist: {
             files: {

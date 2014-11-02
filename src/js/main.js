@@ -38,7 +38,9 @@ var DontMoveMain = (function(values) {
 
                 friend.addClass('shown');
                 
-                //smoothScroll(250, 250);
+                setTimeout(function() {
+                    smoothScroll.animateScroll(null, '#footer', {speed: 250, updateURL: false});
+                }, 250);
             }
         } else {
             switch (type) {
