@@ -71,8 +71,21 @@ var DontMoveMain = (function(values) {
         return;
     }
     
+    function onClickHeader(event) {
+        $('.poster').css('display', 'none');
+        $('.poster-video').css('display', 'block');
+    }
+    
+    function onYouTubeIframeAPIReady() {
+        console.log('tasty bacon');
+    }
+    
     $('.buttons li').on('click', onClickButton);
     smoothScroll.init();
+    
+    $('.poster').one('click', onClickHeader);
+    $('.video-button').one('click', onClickHeader);
+    $('.play-symbol').one('click', onClickHeader);
     
     return DontMoveMain;
 }());
