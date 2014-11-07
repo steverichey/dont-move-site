@@ -21,10 +21,12 @@
     "grunt-contrib-csslint": "^0.3.1",
     "grunt-html-angular-validate": "^0.4.0",
     "grunt-image-embed": "^0.3.1",
-    "grunt-iconizr": "^0.2.2",
-    "jquery-scrollto": "^1.4.4",
     "smooth-scroll": "git://github.com/cferdinandi/smooth-scroll",
-    "video.js": "^4.10.2"
+    "grunt-data-uri": "^0.2.0",
+    "grunt-contrib-imagemin": "^0.9.1",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-uncss": "^0.3.7",
+    "grunt-processhtml": "^0.3.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -48,5 +50,5 @@
   "bugs": {
     "url": "https://github.com/steverichey/dont-move-site/issues"
   },
-  "homepage": "https://github.com/steverichey/dont-move-site"
+  "homepage": "https://dontmove.co"
 }

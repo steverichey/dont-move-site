@@ -47,26 +47,51 @@ module.exports = function(grunt) {
                 collapseWhitespace: true
             },
             files: {
-                'temp/index.html': 'src/index.html'
+                'dist/index.html': 'temp/process.html'
             }
+        }
+    },
+    imagemin: {
+        dist: {
+            src: ['src/img/**'],
+            dest: 'temp/img/'
+        }
+    },
+    copy: {
+        dist: {
+            expand: true,
+            flatten: true,
+            filter: 'isFile',
+            src: ['src/img/**'],
+            dest: 'temp/img/'
+        }
+    },
+    concat_css: {
+        dist: {
+            src: ['src/css/*.css'],
+            dest: 'temp/concat.css'
+        }
+    },
+    dataUri: {
+        dist: {
+            src: ['temp/concat.css'],
+            dest: 'temp/embed.css'
         }
     },
     cssmin: {
         dist: {
             files: [{
-                src: ['src/css/*.css'],
+                src: ['temp/concat.css'],
                 dest: 'temp/min.css'
             }]
         }
     },
-    iconizr: {
-        options: {
-            // options
-        },
+    processhtml: {
         dist: {
-            src: ['src/img'],
-            dest: 'temp'
-        },
+            files: {
+                'temp/process.html' : ['src/index.html']
+            }
+        }
     },
     embed: {
         options: {
@@ -74,7 +99,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'dist/index.html': 'temp/index.html'
+                'dist/index.html': 'temp/process.html'
             }
         }
     },
@@ -91,21 +116,33 @@ module.exports = function(grunt) {
 
   // Load plugins
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-data-uri');
   grunt.loadNpmTasks('grunt-embed');
   grunt.loadNpmTasks('grunt-html-angular-validate');
   grunt.loadNpmTasks('grunt-iconizr');
+  grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-uncss');
 
   // Specify tasks
-  grunt.registerTask('default', ['jshint', 'csslint', 'htmlangular', 'concat', 'browserify', 'uglify', 'htmlmin', 'cssmin', 'embed', 'clean']);
-  grunt.registerTask('noclean', ['jshint', 'csslint', 'htmlangular', 'concat', 'browserify', 'uglify', 'htmlmin', 'cssmin', 'embed']);
+  grunt.registerTask('default', [ 'jshint', 'csslint', 'htmlangular', 
+                                  'concat', 'browserify', 'uglify', 
+                                  'processhtml', 'embed', 'htmlmin', 'copy',
+                                  'concat_css', 'cssmin', 'clean']);
+  grunt.registerTask('noclean', [ 'jshint', 'csslint', 'htmlangular', 
+                                  'concat', 'browserify', 'uglify', 
+                                  'processhtml', 'embed', 'htmlmin', 'copy',
+                                  'concat_css', 'cssmin']);
   grunt.registerTask('wipe', ['clean']);
   grunt.registerTask('watch', ['watch']);
 };

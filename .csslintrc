@@ -1,3 +1,4 @@
 {
-  "regex-selectors": false
+  "regex-selectors": false,
+  "box-sizing": false
 }
