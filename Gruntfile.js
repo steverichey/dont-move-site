@@ -72,16 +72,19 @@ module.exports = function(grunt) {
             dest: 'temp/concat.css'
         }
     },
-    dataUri: {
+    imageEmbed: {
         dist: {
-            src: ['temp/concat.css'],
-            dest: 'temp/embed.css'
+            src: [ "temp/concat.css" ],
+            dest: "temp/embed.css",
+            options: {
+                maxImageSize: 0
+            }
         }
     },
     cssmin: {
         dist: {
             files: [{
-                src: ['temp/concat.css'],
+                src: ['temp/embed.css'],
                 dest: 'temp/min.css'
             }]
         }
@@ -130,19 +133,21 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-data-uri');
   grunt.loadNpmTasks('grunt-embed');
   grunt.loadNpmTasks('grunt-html-angular-validate');
-  grunt.loadNpmTasks('grunt-iconizr');
+  grunt.loadNpmTasks("grunt-image-embed");
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-uncss');
 
   // Specify tasks
   grunt.registerTask('default', [ 'jshint', 'csslint', 'htmlangular', 
                                   'concat', 'browserify', 'uglify', 
+                                  'concat_css', 'copy', 'imageEmbed', 'cssmin', 
                                   'processhtml', 'embed', 'htmlmin', 'copy',
-                                  'concat_css', 'cssmin', 'clean']);
+                                  'clean']);
   grunt.registerTask('noclean', [ 'jshint', 'csslint', 'htmlangular', 
                                   'concat', 'browserify', 'uglify', 
+                                  'concat_css', 'copy', 'imageEmbed', 'cssmin',
                                   'processhtml', 'embed', 'htmlmin', 'copy',
-                                  'concat_css', 'cssmin']);
+                                  ]);
   grunt.registerTask('wipe', ['clean']);
   grunt.registerTask('watch', ['watch']);
 };

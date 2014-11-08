@@ -55,7 +55,7 @@ iframe {
 .poster {
     width: 100%;
     padding-bottom: inherit;
-    background-image: url('img/header.png');
+    background-image: url(./img/header.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
@@ -158,7 +158,7 @@ a[href^="https://"]:after,
 .ext:after,
 .buttons i {
 	display:block;
-    background-image:url('img/icons.svg');
+    background-image:url(./img/icons.svg);
     background-repeat: no-repeat;
 }
 
