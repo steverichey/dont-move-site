@@ -33,13 +33,43 @@ var DontMoveMain = (function(values) {
             if (friend.hasClass('shown')) {
                 friend.removeClass('shown');
             } else {
+                var content = '';
+                
+                if (!friend.hasClass('loaded')) {
+                    switch (type) {
+                        case 'humble':
+                            content = '<div class="hidden"><p class="centered"><iframe src="https://www.humblebundle.com/store/product/dontmove/Dkwodk4" width="550" height="264"></iframe></p><p class="centered">Or, view it in the <a href="https://www.humblebundle.com/store/p/dontmove_storefront" target="_blank">Humble Store</a>.</p></div>';
+                            break;
+                        case 'itchio':
+                            content = '<div class="hidden"><p class="centered hidden"><iframe width="552" height="167" src="http://itch.io/embed/496?linkback=true"></iframe></p><p class="centered">Or, view it on <a href="http://stvr.itch.io/dont-move" target="_blank">itch.io</a>.</p></div>';
+                            break;
+                        case 'desura':
+                            content = '<div class="hidden"><p class="centered"><iframe width="550" height="250" src="https://secure.desura.com/widget/dont-move?stat=1"></iframe></p><p class="centered">Or, view it on <a href="http://www.desura.com/games/dont-move" target="_blank">Desura</a>.</p></div>';
+                            break;
+                        case 'bandcamp':
+                            content = '<p class="centered"><iframe width="460" height="142" src="http://bandcamp.com/EmbeddedPlayer/album=691504519/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"><a href="http://stvr.bandcamp.com/album/dont-move-extended-original-soundtrack">Don&#39;t Move: Extended Original Soundtrack by STVR</a></iframe></p><p class="centered">Or, view the soundtrack on <a href="http://stvr.bandcamp.com/" target="_blank">Bandcamp</a>.</p>';
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                    friend.append(content);
+                    
+                    setTimeout(function() {
+                        friend.addClass('loaded');
+                        $('.loader', friend).remove();
+                        $('.hidden', friend).removeClass('hidden');
+                        smoothScroll.animateScroll(null, '#below', {speed: 250, updateURL: false});
+                    }, 1000);
+                }
+                
                 // hide everything else
                 $('.hideable').removeClass('shown');
 
                 friend.addClass('shown');
                 
                 setTimeout(function() {
-                    smoothScroll.animateScroll(null, '#footer', {speed: 250, updateURL: false});
+                    smoothScroll.animateScroll(null, '#below', {speed: 250, updateURL: false});
                 }, 250);
             }
         } else {
@@ -72,20 +102,15 @@ var DontMoveMain = (function(values) {
     }
     
     function onClickHeader(event) {
+        $('.poster-video').append('<iframe class="scaleframe" src="//www.youtube.com/embed/cRTvjJKQOdg?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1" allowfullscreen></iframe>');
         $('.poster').css('display', 'none');
         $('.poster-video').css('display', 'block');
-    }
-    
-    function onYouTubeIframeAPIReady() {
-        console.log('tasty bacon');
     }
     
     $('.buttons li').on('click', onClickButton);
     smoothScroll.init();
     
     $('.poster').one('click', onClickHeader);
-    $('.video-button').one('click', onClickHeader);
-    $('.play-symbol').one('click', onClickHeader);
     
     return DontMoveMain;
 }());

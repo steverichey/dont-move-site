@@ -47,7 +47,7 @@ module.exports = function(grunt) {
                 collapseWhitespace: true
             },
             files: {
-                'dist/index.html': 'temp/process.html'
+                'dist/index.html': 'temp/embed.html'
             }
         }
     },
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'dist/index.html': 'temp/process.html'
+                'temp/embed.html': 'temp/process.html'
             }
         }
     },
