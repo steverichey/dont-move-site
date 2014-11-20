@@ -4,7 +4,8 @@
   "description": "Updated website for Don't Move.",
   "main": "index.js",
   "dependencies": {
-    "zepto-node": "^1.0.0"
+    "zepto-node": "^1.0.0",
+    "smooth-scroll": "git://github.com/cferdinandi/smooth-scroll"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -21,7 +22,6 @@
     "grunt-contrib-csslint": "^0.3.1",
     "grunt-html-angular-validate": "^0.4.0",
     "grunt-image-embed": "^0.3.1",
-    "smooth-scroll": "git://github.com/cferdinandi/smooth-scroll",
     "grunt-data-uri": "^0.2.0",
     "grunt-contrib-imagemin": "^0.9.1",
     "grunt-concat-css": "^0.3.1",
