@@ -94,6 +94,8 @@ var DontMoveMain = (function(values) {
                     break;
                 case 'gumroad ext':
                     window.open('https://gum.co/GaJE');
+                case 'sellbox ext':
+                    window.open('http://sbx.sk/AlBD');
                     break;
             }
         }
