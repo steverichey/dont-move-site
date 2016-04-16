@@ -1,24 +1,18 @@
 body {
-	font-family: 'Open Sans', 'Helvetica', sans-serif;
-	font-size:1em;
-	font-weight:bold;
-	line-height:1.6;
-	color:#E6E8F2;
-	background-color:#01022A;
+	font-family: sans-serif;
+	font-weight: bold;
+	line-height: 1.6;
+	color: #E6E8F2;
+	background-color: #0A0E1C;
 }
 
 a {
-	text-decoration:none;
-	color:#E59F33;
+	text-decoration: none;
+	color: #E59F33;
 }
 
 a:hover {
-	color:#A10826;
-}
-
-a[href*="steverichey.com"]:after {
-	content: '';
-	margin: 0;
+	color: #A10826;
 }
 
 iframe {
@@ -55,7 +49,7 @@ iframe {
 .poster {
     width: 100%;
     padding-bottom: inherit;
-    background-image: url(./img/header.png);
+    background-image: url(../img/header.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     cursor: pointer;
@@ -71,14 +65,14 @@ iframe {
     position: absolute;
     width: 96px;
     height: 96px;
-    top: 50%;
-    left: 50%;
+    top: 85%;
+    left: 85%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform:    translate(-50%, -50%);
     -o-transform:      translate(-50%, -50%);
     -ms-transform:     translate(-50%, -50%);
     transform:         translate(-50%, -50%);
-    opacity: 0.75;
+    opacity: 0.25;
 }
 
 .video-button:hover {
@@ -86,6 +80,7 @@ iframe {
 }
 
 .play-symbol {
+    box-sizing:content-box;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -95,7 +90,7 @@ iframe {
 
 .play-symbol span {
     position: absolute;
-    top: 10%;
+    top: 11%;
     left: 25%;
     border-top: 38px solid transparent;
     border-bottom: 38px solid transparent;
@@ -121,44 +116,29 @@ iframe {
 }
 
 .buttons {
-	list-style:none outside none;
-	margin:0 auto;
-	padding:1em 0;
-	text-align:justify;
+	padding: 1em 0;
+	text-align: center;
 }
 
 .buttons li {
-	text-align:center;
-	display:inline-block;
-	padding:0;
-	width:23%;
-	height:70px;
+	display: inline-block;
+	width: 19%;
 	margin: 1%;
 	opacity: 0.5;
-	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 	transition-duration: 0.25s;
 	-webkit-transition-duration: 0.25s;
 	-moz-transition-duration: 0.25s;
 	-o-transition-duration: 0.25s;
-	cursor: pointer;
 }
 
 .buttons li:hover {
 	opacity: 1;
 }
+
 /* -- icons -- */
-a[href^="//"]:after,
-a[href^="http://"]:after,
-a[href^="https://"]:after,
-.ext:after,
 .buttons i {
-	display:block;
-    background-image:url(./img/icons.svg);
+	display: block;
+    background-image: url(../img/icons.svg);
     background-repeat: no-repeat;
 }
 
@@ -174,30 +154,30 @@ a[href^="https://"]:after,
 	height:44px;
 }
 
-.amazon i 		{ background-position: 0 0;      }
-.appstore i 	        { background-position: 0 -44px;  }
-.bandcamp i 		{ background-position: 0 -88px;  }
-.desura i 		{ background-position: 0 -132px; }
-.greenlight i 	{ background-position: 0 -188px; }
-.gumroad i 		{ background-position: 0 -232px; }
-.humble i 		{ background-position: 0 -276px; }
-.indiedb i 		{ background-position: 0 -320px; }
-.indiegs i 	        { background-position: 0 -364px; }
-.itchio i 		{ background-position: 0 -408px; }
-.play i 			{ background-position: 0 -452px; }
-.press i 		        { background-position: 0 -496px; }
-.trailer i 		{ background-position: 0 -540px; }
+.amazon i 	{ background-position: 0 0;      }
+.appstore i { background-position: 0 -44px;  }
+.bandcamp i { background-position: 0 -88px;  }
+.facebook i { background-position: 0 -132px; }
+.googplay i { background-position: 0 -176px; }
+.gumroad i  { background-position: 0 -220px; }
+.humble i   { background-position: 0 -264px; }
+.indiegs i  { background-position: 0 -308px; }
+.itchio i   { background-position: 0 -352px; }
+.press i    { background-position: 0 -396px; }
+.sellbox i  { background-position: 0 -440px; }
+.steam i    { background-position: 0 -484px; }
+.twitter i  { background-position: 0 -528px; }
 
 a[href^="//"]:after,
 a[href^="http://"]:after,
-a[href^="https://"]:after,
-.ext:after {
+a[href^="https://"]:after {
+    background-image: url(../img/ext.svg);
+    background-size: 12px 12px;
     content: '';
     display: inline-block;
+    height: 12px;
     margin: 0 0 0 5px;
     width: 12px;
-    height: 12px;
-    background-position: 0 -176px;
 }
 
 .hideable {
@@ -215,12 +195,12 @@ a[href^="https://"]:after,
 }
 
 blockquote {
-	position: relative;
-	padding: 10px;
-	margin: 5%;
-    min-height: 4em;
 	border: 1px solid rgb(128, 128, 128);
 	border: 1px solid rgba(255, 255, 255, 0.25);
+	margin: 5%;
+    min-height: 4em;
+	position: relative;
+	padding: 10px;
 }
 
 blockquote .source:before {

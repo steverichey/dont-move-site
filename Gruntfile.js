@@ -18,9 +18,6 @@ module.exports = function(grunt) {
             src: ['src/css/*.css']
         }
     },
-    htmlangular: {
-        dist: ['src/*.html']
-    },
     concat: {
         dist: {
             src: 'src/js/*.js',
@@ -59,12 +56,23 @@ module.exports = function(grunt) {
     },
     copy: {
         dist: {
-            expand: true,
-            flatten: true,
-            filter: 'isFile',
-            src: ['src/img/**'],
-            dest: 'temp/img/'
-        }
+            files : [
+                {
+                    expand: true,
+                    flatten: true,
+                    filter: 'isFile',
+                    src: 'src/img/**',
+                    dest: 'dist/img/'
+                },
+                {
+                    expand: true,
+                    flatten: true,
+                    filter: 'isFile',
+                    src: 'src/favicons/**',
+                    dest: 'dist/'
+                }
+            ]
+        },
     },
     concat_css: {
         dist: {
@@ -72,19 +80,28 @@ module.exports = function(grunt) {
             dest: 'temp/concat.css'
         }
     },
-    imageEmbed: {
+    replace: {
         dist: {
-            src: [ "temp/concat.css" ],
-            dest: "temp/embed.css",
             options: {
-                maxImageSize: 0
-            }
+                patterns: [
+                    {
+                        match: /(..\/img)/g,
+                        replacement: 'img'
+                    }
+                ]
+            },
+            files: [
+                {
+                    src: 'temp/concat.css',
+                    dest: 'temp/replaced.css'
+                }
+            ]
         }
     },
     cssmin: {
         dist: {
             files: [{
-                src: ['temp/embed.css'],
+                src: ['temp/replaced.css'],
                 dest: 'temp/min.css'
             }]
         }
@@ -132,20 +149,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-data-uri');
   grunt.loadNpmTasks('grunt-embed');
-  grunt.loadNpmTasks('grunt-html-angular-validate');
   grunt.loadNpmTasks("grunt-image-embed");
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-replace');
 
   // Specify tasks
-  grunt.registerTask('default', [ 'jshint', 'csslint', 'htmlangular', 
+  grunt.registerTask('default', [ 'jshint', 'csslint', 
                                   'concat', 'browserify', 'uglify', 
-                                  'concat_css', 'copy', 'imageEmbed', 'cssmin', 
+                                  'concat_css', 'copy', 'replace', 'cssmin', 
                                   'processhtml', 'embed', 'htmlmin', 'copy',
                                   'clean']);
-  grunt.registerTask('noclean', [ 'jshint', 'csslint', 'htmlangular', 
+  grunt.registerTask('noclean', [ 'jshint', 'csslint',
                                   'concat', 'browserify', 'uglify', 
-                                  'concat_css', 'copy', 'imageEmbed', 'cssmin',
+                                  'concat_css', 'copy', 'replace', 'cssmin',
                                   'processhtml', 'embed', 'htmlmin', 'copy',
                                   ]);
   grunt.registerTask('wipe', ['clean']);
