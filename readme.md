@@ -2,6 +2,21 @@
 
 This is the code for the new Don't Move website.
 
+# What's New
+
+* Updated header image
+* Updated links for all sites
+* Updated widgets
+* Removed all JS dependencies
+* Images are no longer inlined as Base64
+* Updated icons for all sites
+* External links are now links, instead of weird fake links
+* Removed Google Analytics
+* Removed use of Open Sans
+* Change social media links to buttons
+* Removed IndieDB and Desura links
+* Placeholder for Steam widget
+
 # Build
 
 1. Install [NodeJS](http://nodejs.org/).
@@ -12,6 +27,6 @@ This is the code for the new Don't Move website.
 
 # License
 
-Code is shared under an MIT license. See [license.md](https://github.com/steverichey/dont-move-site/blob/master/license.md) for details.
+Code is shared under an MIT license. See [license.md](./license.md) for details.
 
-Don't Move and all associated imagery is &copy; 2013-2014 Steve Richey.
+Don't Move and all associated imagery is &copy; 2013-2016 Steve Richey.
