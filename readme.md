@@ -1,6 +1,6 @@
 # Don't Move Website
 
-This is the code for the new Don't Move website.
+This is the code for the new Don't Move website, which you can see [here](http://dontmove.co).
 
 # What's New
 
