@@ -31,8 +31,7 @@ function onClickButton(event) {
         if (!friend.classList.contains('loaded')) {
             switch (type) {
                 case 'steam':
-                    //content='<div class="hidden"><p class="centered hidden"><iframe src="http://store.steampowered.com/widget/334350/" frameborder="0" width="646" height="190"></iframe></p></div>';
-                    content='<div class="hidden"><p class="centered hidden">Coming soon!</p></div>';
+                    content='<div class="hidden"><p class="centered hidden"><iframe src="http://store.steampowered.com/widget/334350/" frameborder="0" width="646" height="190"></iframe></p></div>';
                     break;
                 case 'humble':
                     content = '<div class="hidden"><p class="centered"><iframe src="https://www.humblebundle.com/store/product/dontmove/Dkwodk4" width="550" height="264"></iframe></p><p class="centered">Or, view it in the <a href="https://www.humblebundle.com/store/p/dontmove_storefront" target="_blank">Humble Store</a>.</p></div>';
