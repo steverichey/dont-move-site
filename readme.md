@@ -1,4 +1,4 @@
-# Don't Move Website
+# [Don't Move Website](http://dontmove.co)
 
 This is the code for the new Don't Move website, which you can see [here](http://dontmove.co).
 
@@ -15,7 +15,9 @@ This is the code for the new Don't Move website, which you can see [here](http:/
 * Removed use of Open Sans
 * Change social media links to buttons
 * Removed IndieDB and Desura links
-* Placeholder for Steam widget
+* Added Steam widget
+* Super-rad favicons all up ons
+* Much simpler (but less fancy) scroll-to-bottom logic
 
 # Build
 
