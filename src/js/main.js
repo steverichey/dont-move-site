@@ -67,7 +67,7 @@ function onClickButton(event) {
                     }
                 }
 
-                //smoothScrollTo('#below', 400, 1000);
+                window.scrollTo(0, document.body.scrollHeight);
             }, 1000);
         }
 
@@ -81,7 +81,7 @@ function onClickButton(event) {
         friend.classList.add('shown');
 
         setTimeout(function() {
-            //smoothScrollTo('#below', 400, 1000);
+            window.scrollTo(0, document.body.scrollHeight);
         }, 250);
     }
 }
